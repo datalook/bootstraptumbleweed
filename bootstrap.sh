@@ -29,3 +29,6 @@ EOF
 sudo systemctl enable cockpit.socket
 sudo systemctl start cockpit.socket
 sudo systemctl enable kubelet
+
+firewall-cmd --permanent --zone=public --add-service=cockpit
+firewall-cmd --reload
